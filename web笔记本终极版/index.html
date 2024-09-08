@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猩狒狐苏の每日菜单</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header" id="main-header">猩狒狐苏の每日菜单</div>
+        <div class="subheader">酸甜苦辣咸 民以食为天</div>
+        <div id="color-controls">
+            <div class="color-picker">
+                <input type="color" id="global-background-color" value="#F8F1D0" onchange="changeGlobalBackgroundColor()">
+                <label for="global-background-color">背景色</label>
+            </div>
+            <div class="color-picker">
+                <input type="color" id="global-font-color" value="#3A5A98" onchange="changeGlobalFontColor()">
+                <label for="global-font-color">字体色</label>
+            </div>
+        </div>
+        <form id="note-form">
+            <input type="text" id="note-title" placeholder="标题" required>
+            <textarea id="note-content" rows="4" placeholder="主要内容..." required></textarea>
+            <div class="emoji-dropdown">
+                <button type="button" id="emoji-button" onclick="toggleEmojiList()"><span>😊</span></button>
+                <div id="emojiList" class="emoji-content"></div>
+            </div>
+            <input type="text" id="note-mood" placeholder="Mood" required>
+            <input type="text" id="note-motto" placeholder="座右铭" required>
+            <button type="submit" id="save-button"><span>✓</span></button>
+        </form>
+        <div class="line"></div>
+        <div class="note-list" id="note-list"></div>
+    </div>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
